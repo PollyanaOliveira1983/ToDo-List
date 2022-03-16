@@ -1,0 +1,18 @@
+
+
+
+
+body {
+  width:100vw;
+  right: 100vw;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+  font-family: Ubuntu, "Helvetica Neue", sans-serif;
+  background-image: url(./assets/3033306.jpg);
+  background-size:cover;
+  background-repeat:no-repeat;
+}
+
+

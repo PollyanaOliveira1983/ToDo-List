@@ -1,0 +1,35 @@
+
+<div class="wrapper">
+  <div>
+    <h1 [ngStyle]= "{color:'#DB7093', fontSize:'80px', marginLeft:'10px'}">Todo List</h1>
+      <form>
+        <input [ngStyle]="{marginLeft:'100px'}" type="text" [(ngModel)]="itemToAdd" name="item" placeholder="Digite aqui suas tarefas."><br>
+        <button [ngStyle]= "{marginTop:'10px', width:'100px', marginLeft:'140px'}"mat-raised-button id="checkAll" (click)="addToList()">Adicionar</button>
+      </form>
+        <ul [ngStyle]= "{marginLeft:'100px'}">
+          <li *ngFor="let item of todoList; let i = index">
+            <div>
+              <label>
+                <input type="checkbox" value=""(click)="doItem(i)"/>{{item}}</label>
+                <button value="" (click)="excluiTarefa(i)" ><mat-icon>delete</mat-icon></button>
+              </div>
+            </li>
+          </ul>
+          <h2 [ngStyle]= "{color:'#DB7093', fontSize:'40px', marginLeft:'130px'}"> Feitos</h2>
+          <ul [ngStyle]= "{marginLeft:'130px'}">
+            <li *ngFor="let item of doneList">
+              <div class="checkbox">
+                <label>
+                  <span style="text-decoration:line-through;">
+                    {{item}}
+                  </span>
+                </label>
+              </div>
+            </li>
+          </ul>
+          <button [ngStyle]= "{marginTop:'10px', width:'100px', marginLeft:'140px'}"mat-raised-button value="" (click)="excluirAsTarefas()" > Excluir </button>
+  </div>
+</div>
+
+
+
